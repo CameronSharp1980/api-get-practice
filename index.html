@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="pokemon-buttons">
+        <h1>Pokemon API</h1>
+        <!-- <button onclick="app.controllers.getController.getPokemon('pokeNextUrl')">Get Previous 20 Pokemon!</button> -->
+        <button onclick="app.controllers.getController.getPokemon('pokeGetUrl')">Get Pokemon!</button>
+        <!-- <button onclick="app.controllers.getController.getPokemon('pokePrevUrl')">Get Next 20 Pokemon!</button> -->
+    </div>
+    <div class="dnd-buttons">
+        <h1>DnD API</h1>
+        <button onclick="app.controllers.getController.getDnd()">Get DnD Data!</button>
+    </div>
+    <div id="content">
+        <div id="poke-content"></div>
+        <div id="dnd-buttons"></div>
+        <div id="dnd-content"></div>
+    </div>
+
+
+
+
+    <!-- LIBRARIES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- SERVICES -->
+    <script src="getService.js"></script>
+    <!-- CONTROLLERS -->
+    <script src="getController.js"></script>
+    <!-- APP/INIT -->
+    <script src="app.js"></script>
+</body>
+
+</html>
