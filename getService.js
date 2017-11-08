@@ -82,8 +82,8 @@ function GetService() {
                 //save data to local variable to work with
                 dndSpells = JSON.parse(res)
                 console.log(dndSpells)
-                drawDndButtons(dndSpells)
-
+                // drawDndButtons(dndSpells)
+                
             })
             .fail(function (res) {
                 // debugger
@@ -106,19 +106,23 @@ function GetService() {
 
     }
 
-    function drawDndButtons(dndSpells) {
-        var dndElem = document.getElementById('dnd-buttons')
-        var template = ''
-        for (var i = 0; i < dndSpells.results.length; i++) {
-            var spell = dndSpells.results[i];
-            template += `
-            
-            <button onclick="app.controllers.getController.drawSpell('${spell.url}')">${spell.name}</button>
-            `
-        }
-        // console.log(template)
-        dndElem.innerHTML = template
+    this.getSpells = function getSpells() {
+        return JSON.parse(JSON.stringify(dndSpells))
     }
+
+    // function drawDndButtons(dndSpells) {
+    //     var dndElem = document.getElementById('dnd-buttons')
+    //     var template = ''
+    //     for (var i = 0; i < dndSpells.results.length; i++) {
+    //         var spell = dndSpells.results[i];
+    //         template += `
+
+    //         <button onclick="app.controllers.getController.drawSpell('${spell.url}')">${spell.name}</button>
+    //         `
+    //     }
+    //     // console.log(template)
+    //     dndElem.innerHTML = template
+    // }
 
     this.drawSpell = function drawSpell(url) {
         var statsElem = document.getElementById('dnd-content')

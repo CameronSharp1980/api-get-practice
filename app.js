@@ -1,5 +1,6 @@
 var app = {
     controllers: {
-        getController: new GetController()
+        getController: new GetController(),
+        waniController: new WaniController()
     }
 }

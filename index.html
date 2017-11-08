@@ -18,11 +18,18 @@
     <div class="dnd-buttons">
         <h1>DnD API</h1>
         <button onclick="app.controllers.getController.getDnd()">Get DnD Data!</button>
+        <button onclick="app.controllers.getController.drawDndButtons()">Draw Buttons!</button>
+    </div>
+    <div class="wani-buttons">
+        <h1>WaniKani:</h1>
+        <button onclick="app.controllers.waniController.getWani()">Get WaniKani Data!</button>
+        <button onclick="app.controllers.waniController.drawWani()"> Draw Kanji!</button>
     </div>
     <div id="content">
         <div id="poke-content"></div>
         <div id="dnd-buttons"></div>
         <div id="dnd-content"></div>
+        <div id="wani-content"></div>
     </div>
 
 
@@ -32,8 +39,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- SERVICES -->
     <script src="getService.js"></script>
+    <script src="waniService.js"></script>
     <!-- CONTROLLERS -->
     <script src="getController.js"></script>
+    <script src="waniController.js"></script>
     <!-- APP/INIT -->
     <script src="app.js"></script>
 </body>
